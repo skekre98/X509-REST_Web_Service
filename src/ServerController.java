@@ -17,35 +17,35 @@ import org.springframework.web.bind.annotation.ResponseBody;
 public class ServerController {
 	
 	@PreAuthorize("hasAuthority('ROLE_USER')")
-    @RequestMapping(value = "/secured", method = {RequestMethod.GET, RequestMethod.POST}, consumes = {"application/json"}, produces = {"application/json"})
+    	@RequestMapping(value = "/secured", method = {RequestMethod.GET, RequestMethod.POST}, consumes = {"application/json"}, produces = {"application/json"})
 	@ResponseBody
-    public ResponseEntity<String> secured(@RequestBody Message m) {
+    	public ResponseEntity<String> secured(@RequestBody Message m) {
     	
-        String accountID = "999\n";
+		String accountID = "999\n";
 
-        if (m.getDid() == 1) {
-          accountID = "101\n";
-        } else if (m.getDid() == 2) {
-          accountID = "102\n";
-        } else if (m.getDid() == 3) {
-          accountID = "103\n";
-        } else if (m.getDid() == 4) {
-          accountID = "104\n";
-        } else if (m.getDid() == 5) {
-          accountID = "105\n";
-        } 
+		if (m.getDid() == 1) {
+		  accountID = "101\n";
+		} else if (m.getDid() == 2) {
+		  accountID = "102\n";
+		} else if (m.getDid() == 3) {
+		  accountID = "103\n";
+		} else if (m.getDid() == 4) {
+		  accountID = "104\n";
+		} else if (m.getDid() == 5) {
+		  accountID = "105\n";
+		} 
 
-        return new ResponseEntity<String>(accountID, HttpStatus.OK);
+		return new ResponseEntity<String>(accountID, HttpStatus.OK);
 
-    }
+    	}
 								
     
 	@PreAuthorize("hasAuthority('ROLE_USER')")	
-    @RequestMapping(value = "/user")
-    public ResponseEntity<String> user(Model model, Principal principal) {
-        UserDetails currentUser = (UserDetails) ((Authentication) principal).getPrincipal();
-        model.addAttribute("username", currentUser.getUsername());
-        return new ResponseEntity<String>("Client Certificate Verified!", HttpStatus.OK);
-    }
+    	@RequestMapping(value = "/user")
+    	public ResponseEntity<String> user(Model model, Principal principal) {
+		UserDetails currentUser = (UserDetails) ((Authentication) principal).getPrincipal();
+		model.addAttribute("username", currentUser.getUsername());
+		return new ResponseEntity<String>("Client Certificate Verified!", HttpStatus.OK);
+    	}
     
 }
