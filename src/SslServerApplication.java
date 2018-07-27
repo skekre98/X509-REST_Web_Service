@@ -25,7 +25,7 @@ public class SslServerApplication extends WebSecurityConfigurerAdapter {
 	
 	@Override
     protected void configure(HttpSecurity http) throws Exception {
-		http.csrf().disable(); //NOT SECURE, LATER SHOULD ACTUALLY INCLUDE CSRF TOKEN IN JSON REQUEST
+	http.csrf().disable(); //NOT SECURE, LATER SHOULD ACTUALLY INCLUDE CSRF TOKEN IN JSON REQUEST
         http.authorizeRequests().anyRequest().authenticated().and().x509().subjectPrincipalRegex("CN=(.*?)(?:,|$)").userDetailsService(userDetailsService());
     }
 	
