@@ -45,9 +45,6 @@ public class ServerController {
     public ResponseEntity<String> user(Model model, Principal principal) {
         UserDetails currentUser = (UserDetails) ((Authentication) principal).getPrincipal();
         model.addAttribute("username", currentUser.getUsername());
-        Car car = new Car();
-        car.setColor("red");
-        car.setMiles(15);
         return new ResponseEntity<String>("Client Certificate Verified!", HttpStatus.OK);
     }
     
