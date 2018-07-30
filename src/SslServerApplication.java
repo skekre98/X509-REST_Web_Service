@@ -24,22 +24,22 @@ public class SslServerApplication extends WebSecurityConfigurerAdapter {
 	}
 	
 	@Override
-    protected void configure(HttpSecurity http) throws Exception {
+	protected void configure(HttpSecurity http) throws Exception {
 	http.csrf().disable(); //NOT SECURE, LATER SHOULD ACTUALLY INCLUDE CSRF TOKEN IN JSON REQUEST
-        http.authorizeRequests().anyRequest().authenticated().and().x509().subjectPrincipalRegex("CN=(.*?)(?:,|$)").userDetailsService(userDetailsService());
-    }
+	http.authorizeRequests().anyRequest().authenticated().and().x509().subjectPrincipalRegex("CN=(.*?)(?:,|$)").userDetailsService(userDetailsService());
+	}
 	
 	@Bean
-    public UserDetailsService userDetailsService() {
-        return new UserDetailsService() {
-            @Override
-            public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
-                if (username.equals("cid")) {
-                    return new User(username, "", AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"));
-                }
-                throw new UsernameNotFoundException("User not found!");
-            }
-        };
-    }
+	public UserDetailsService userDetailsService() {
+	return new UserDetailsService() {
+	    @Override
+	    public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {
+		if (username.equals("cid")) {
+		    return new User(username, "", AuthorityUtils.commaSeparatedStringToAuthorityList("ROLE_USER"));
+		}
+		throw new UsernameNotFoundException("User not found!");
+	    }
+	};
+	}
 }
 
