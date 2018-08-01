@@ -47,4 +47,6 @@ server.ssl.client-auth=need
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
 
 ## References
-[Spring Security](https://spring.io/projects/spring-security)
+[JSON](https://www.leveluplunch.com/java/tutorials/014-post-json-to-spring-rest-webservice/) - Tutorial on how JSON binds to java object
+[Spring Security](https://spring.io/projects/spring-security) - Documentation for Spring Security
+
