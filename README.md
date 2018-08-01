@@ -35,3 +35,6 @@ server.ssl.trust-store=**PATH**/truststore.jks
 server.ssl.trust-store-password=password
 server.ssl.client-auth=need
 ```
+
+## Dependencies
+[Spring Boot](https://spring.io/projects/spring-boot) - 
