@@ -23,4 +23,4 @@ public ResponseEntity<String> secured(@RequestBody Message m) {
 		return new ResponseEntity<String>(accountID, HttpStatus.OK);
 }
 ```
-
+Spring annotations such as @RequestMapping and @ResponseBody allow us to use REST for our designated methods.
