@@ -36,5 +36,5 @@ server.ssl.trust-store-password=password
 server.ssl.client-auth=need
 ```
 
-## Dependencies
-[Spring Boot](https://spring.io/projects/spring-boot) - 
+## Built With
+* [Spring Boot](https://spring.io/projects/spring-boot) - The framework used to build this application in Java
