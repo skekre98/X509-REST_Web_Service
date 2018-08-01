@@ -27,3 +27,4 @@ Spring annotations such as @RequestMapping and @ResponseBody allow us to use RES
 
 ## X509 Certificate Authentication
 Allow us to verify the identity of a communication peer when using the HTTPS (HTTP over SSL) protocol.
+while a secure connection is established, the client verifies the server according to its certificate (issued by a trusted certificate authority).
