@@ -41,3 +41,7 @@ server.ssl.client-auth=need
 * [Jackson Databind](https://github.com/FasterXML/jackson-databind) - Dependency used to convert Java objects in JSON message to proper data format for manipulation and response
 * [Maven](https://maven.apache.org/) - Dependency management used to package and run application
 
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
