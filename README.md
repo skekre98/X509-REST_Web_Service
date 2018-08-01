@@ -28,3 +28,10 @@ Spring annotations such as @RequestMapping and @ResponseBody allow us to use RES
 ## X509 Certificate Authentication
 Allow us to verify the identity of a communication peer when using the HTTPS (HTTP over SSL) protocol.
 While a secure connection is established, the client verifies the server according to its certificate (issued by a trusted certificate authority). 
+
+This is why it is also important to provide the location of the trustore and tell our server that client authentication is needed in our application.properties file. 
+```
+server.ssl.trust-store=**PATH**/truststore.jks
+server.ssl.trust-store-password=password
+server.ssl.client-auth=need
+```
