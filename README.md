@@ -45,3 +45,6 @@ server.ssl.client-auth=need
 ## License
 
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details
+
+## References
+[Spring Security](https://spring.io/projects/spring-security)
