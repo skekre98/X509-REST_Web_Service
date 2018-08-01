@@ -1,5 +1,5 @@
 # X509-REST_Web_Service
-A REST Web Service that provides X509 mutual certificate authentication. This web service has an HTTPS endpoint that runs through SSL certificate verification and can recieve and output data in JSON format. The X509 is handled through Spring security and a RESTful API was used to handle the GET and POST requests for the data. This application can be packaged and launched through maven with the command ```mvn spring-boot:run```. You should then be able to see your successfully run web service on [a link](https://localhost:8443/user).
+A REST Web Service that provides X509 mutual certificate authentication. This web service has an HTTPS endpoint that runs through SSL certificate verification and can recieve and output data in JSON format. The X509 is handled through Spring security and a RESTful API was used to handle the GET and POST requests for the data. This application can be packaged and launched through maven with the command ```mvn spring-boot:run```. You should then be able to see your successfully run web service on [https://localhost:8443/user](https://localhost:8443/user).
 
 
 ## RESTful API
