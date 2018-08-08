@@ -37,7 +37,7 @@ server.ssl.client-auth=need
 
 ## Built With
 * [Spring Boot](https://spring.io/projects/spring-boot) - The framework used to build this application in Java
-* [Jackson Databind](https://github.com/FasterXML/jackson-databind) - Dependency used to convert Java objects in JSON message to proper data format for manipulation and response
+* [Jackson Databind](https://github.com/FasterXML/jackson-databind) - Dependency used to handle JSON message as a Java object
 * [Maven](https://maven.apache.org/) - Dependency management used to package and run application
 
 
