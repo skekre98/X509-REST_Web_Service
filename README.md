@@ -3,7 +3,7 @@ A REST Web Service that provides X509 mutual certificate authentication. This we
 
 
 ## RESTful API
-A RESTful API explicitly takes advantage of HTTP methodologies defined by the RFC 2616 protocol. They use GET to retrieve a resource; PUT to change the state of or update a resource, which can be an object, file or block; POST to create that resource; and DELETE to remove it.
+A RESTful API uses GET to retrieve a resource, PUT to change the state of or update a resource, which can be an object, file or block, POST to create that resource; and DELETE to remove it.
 ```java
 @RequestMapping(value = "/secured", method = {RequestMethod.GET, RequestMethod.POST}, consumes = {"application/json"})
 @ResponseBody
